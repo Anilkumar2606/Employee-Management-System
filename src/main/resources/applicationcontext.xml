@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- bean definitions here -->
+    
+    <bean class="com.example.springdemo1.Address" id="address">
+        <property name="dNo" value="100"></property>
+        <property name="area" value="Kokapet"></property>
+        <property name="city" value="Hyderabad"></property>
+        <property name="pincode" value="500045"></property>
+    </bean>
+     <bean class="com.example.springdemo1.Employee" id="employee1">
+	<constructor-arg name="empId" value="108"></constructor-arg>
+ 	 <constructor-arg name="name" value="Rahul"></constructor-arg> 
+  	 <constructor-arg name="email" value="rahul@gmail.com"></constructor-arg> 
+  	 <constructor-arg name="salary" value="40000"></constructor-arg> 
+     <constructor-arg name="address" ref="address" ></constructor-arg> 
+   
+</bean>   
+
+
+     <bean class="com.example.springdemo1.Employee" id="employee2">
+
+	<constructor-arg name="empId" value="109"></constructor-arg>
+ 	 <constructor-arg name="namei" value="Anil"></constructor-arg> 
+  	 <constructor-arg name="email" value="anil@gmail.com"></constructor-arg> 
+  	 <constructor-arg name="salary" value="42000"></constructor-arg> 
+     <constructor-arg name="address" ref="address" ></constructor-arg> 
+   
+</bean>       
+
+</beans>
